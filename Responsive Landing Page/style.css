@@ -1,0 +1,111 @@
+/*Reset CSS*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Navbar - FlexBox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: lightblue;
+}
+
+.cta {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 6px;
+}
+
+.cta:hover {
+    background-color: darkblue;
+}
+
+/* Features Section - Grid */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.feature{
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+/* Button Hover Effect */
+.cta {
+    transition: transform 0.3s ease-in-out;
+}
+
+.cta:hover {
+    transform: scale(1.1);
+}
+
+/* Fade in animation for Features */
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(20px);}  
+    100% {opacity: 1; transform: translate(0);}      
+}
+
+.feature {
+    animation: fadeIn 1s ease-in-out;
+}
