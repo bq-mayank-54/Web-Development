@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing Card with Dark Mode Toggle</title>
+  
+  
+  <!-- Load Tailwind CSS from CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class', // Enable dark mode using the 'class' strategy
+    }
+  </script>
+  <style>
+    /* Smooth transition for background and text color changes */
+    html, body {
+      transition: background-color 0.1s, color 0.1s;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex items-center justify-center">
+  <!-- Dark Mode Toggle Button -->
+  <div class="absolute top-5 right-5">
+    <button 
+    onclick="toggleDarkMode()"  
+    id="dark-mode-toggle" class="px-4 py-2 bg-blue-500 text-white rounded shadow">
+      Toggle Dark Mode
+    </button>
+  </div>
+
+  <!-- Pricing Card -->
+  <div class="max-w-sm w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-colors duration-500">
+    <div class="p-6">
+      <h2 class="text-2xl font-bold mb-2">Pro Plan</h2>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">Ideal for professionals and advanced users.</p>
+      <div class="flex items-baseline">
+        <span class="text-4xl font-extrabold">$29</span>
+        <span class="ml-1 text-xl text-gray-500 dark:text-gray-400">/month</span>
+      </div>
+      <ul class="mt-6 space-y-2">
+        <li class="flex items-center">
+          <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"></path>
+          </svg>
+          Feature One
+        </li>
+        <li class="flex items-center">
+          <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"></path>
+          </svg>
+          Feature Two
+        </li>
+        <li class="flex items-center">
+          <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"></path>
+          </svg>
+          Feature Three
+        </li>
+      </ul>
+      <button class="mt-6 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded">
+        Get Started
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
