@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="submit" id="userForm" onsubmit="return validateForm()">
+
+        <header>
+
+        <h2>Registration Form</h2>
+
+        </header>
+
+        <!-- Input Name -->
+        <label for="userName">Username :</label>
+        <input type="text" id="userName" name="userName" placeholder="Enter your full name" required>
+        <small class="error" id="nameError"></small>
+
+        <!-- Input Email -->
+        <label for="email">Email Address : </label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        <small class="error" id="emailError"></small>
+
+        <!-- Password -->
+        <label for="password">Password : </label>
+        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+        <small class="error" id="passwordError"></small>
+
+        <!-- Confirm Password -->
+        <label for="confirmPassword">Confirm Password :</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+        <small class="error" id="confirmPasswordError"></small>
+
+        <!-- Phone -->
+        <label for="phone">Phone : </label>
+        <input type="number" id="phone" name="phone" placeholder="Phone Number" required>
+        <small class="error" id="phoneError"></small>
+
+        <!-- Gender -->
+        <label> Gender :</label>
+        <div class="radio-container">
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+            </div>
+            
+            <div class="radio-group">
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+        </div>
+
+        <!-- Age -->
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" min="10" max="100" placeholder="Enter your age" required>
+        <small class="error" id="ageError" ></small>
+
+        <!-- Terms & Conditions -->
+        <footer>
+
+        <label>
+            <input type="checkbox" id="terms">
+         I agree to all the <a href="#">Tems and Conditions</a>
+        </label>
+        <small class="error" id="termsError"></small>
+
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+
+        </footer>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
