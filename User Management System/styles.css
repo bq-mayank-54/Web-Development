@@ -1,0 +1,17 @@
+/* Basic CSS styling */
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  /* Responsive Design: Adjust padding for smaller screens */
+  @media (max-width: 600px) {
+    .container {
+      padding: 0.5rem;
+    }
+  }
+  
